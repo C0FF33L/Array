@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods </title>
+</head>
+<style>
+    body{
+        background-color: rgb(201, 221, 255);
+    }
+   h1,h2 {
+  width: 568px; 
+  font-family: Mitr; 
+  font-size: 40px; 
+  font-weight: 700; 
+
+  color: #171A1FFF; 
+}
+    
+button {
+  
+  width: 164px; 
+  height: 52px; 
+  padding: 0 20px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: Lora;
+  font-size: 18px; 
+  font-weight: 400; 
+  line-height: 28px; 
+  color: #DE3B40FF; 
+  background: #FDF2F2FF; 
+  opacity: 1; 
+  border: none; 
+  border-radius: 4px; 
+}
+
+button:hover {
+  color: #DE3B40FF;
+  background: #F9DBDCFF; 
+}
+
+button:hover:active {
+  color: #DE3B40FF;
+  background: #F5C4C6FF; 
+}
+
+button:disabled {
+  opacity: 0.4; 
+}
+</style>
+<body>
+    <h1>Array Methods Thingy</h1>
+    
+    <h2>Array Length</h2>
+    <button onclick="showArrayLength()">Get Array Length</button>
+    <p id="arrayLength"></p>
+    
+    <h2>Array toString()</h2>
+    <button onclick="showArrayToString()">Convert to String</button>
+    <p id="arrayToString"></p>
+    
+    <h2>Array pop()</h2>
+    <button onclick="showArrayPop()">Remove Last Element</button>
+    <p id="arrayPop"></p>
+    
+    <script>
+        
+        var myArray = [1, 2, 3, 4, 5];
+
+        function showArrayLength() {
+            var length = myArray.length;
+            document.getElementById("arrayLength").textContent = "Array Length: " + length;
+        }
+
+        function showArrayToString() {
+            var arrayString = myArray.toString();
+            document.getElementById("arrayToString").textContent = "Array as String: " + arrayString;
+        }
+
+        function showArrayPop() {
+            var poppedElement = myArray.pop();
+            document.getElementById("arrayPop").textContent = "Popped Element: " + poppedElement;
+        }
+    </script>
+</body>
+</html>
